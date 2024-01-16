@@ -1,3 +1,122 @@
+* {
+  box-sizing: border-box;
+  --containerWidth: 500px;
+  --commonFontSize: 1.2rem;
+  text-decoration: none;
+  color: grey;
+}
+
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
   text-align: center;
+}
+.content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  font-weight: 900;
+  margin: 0;
+}
+h1 {
+  font-size: 2rem;
+  color: gray;
+}
+
+h2 {
+  color: gray;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.header {
+  border-bottom: 0.5rem solid gray;
+  width: calc(var(--containerWidth) * 2);
+  margin: auto;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.header-title {
+  margin-top: 2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu button {
+  padding: 1rem, 0;
+  font-size: var(--commonFontSize);
+  background-color: gray;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.inputs label {
+  font-size: var(--commonFontSize);
+}
+
+.inputs input {
+  background-color: whitesmoke;
+  color: black;
+  font-weight: 700;
+  padding: 1rem;
+  font-size: var(--commonFontSize);
+  margin: auto;
+}
+.form {
+  width: var(--containerWidth);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: gray;
+  color: black;
+  width: 350px;
+  padding: 1rem 0;
+  font-size: var(--commonFontSize);
+  cursor: pointer;
+  font-weight: 900;
+}
+.form .error {
+  background-color: tomato;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: white;
+  font-size: var(--commonFontSize);
+}
+
+.list {
+  font-size: var(--commonFontSize);
+}
+
+li {
+  list-style-type: none;
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
 }
